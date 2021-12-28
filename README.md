@@ -1,4 +1,4 @@
-# Homework idempotency
+# Homework idempotency (Идемпотнетность с request_id)
 
 ## Install order service
 
@@ -47,7 +47,7 @@ brew install newman
 ```
 and run prepared test
 ```
-newman run ./hw_stream_processing.postman_collection.json
+newman run ./hw_idempotency.postman_collection.json
 ```
 or import this file to postman, and start manually
 
