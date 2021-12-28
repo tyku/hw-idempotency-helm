@@ -6,7 +6,7 @@ environment:
 applicationPort: 8000
 
 migration:
-  repository: tyku/hw_stream_processing
+  repository: tyku/hw_7
   imagePullPolicy: Always
   tag: latest
 
@@ -34,8 +34,3 @@ postgresql:
   postgresqlDatabase: myapp
   service:
     port: "5432"
-
-kafka:
-  enabled: true
-  port: "9092"
-  broker: kafka-0.kafka-headless.default.svc.cluster.local:9092

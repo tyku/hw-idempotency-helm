@@ -35,16 +35,6 @@ spec:
                 configMapKeyRef:
                   name: "{{ .Values.serviceInstance.nameOverride }}-config"
                   key: APP_PORT
-            - name: KAFKA_BROKER
-              valueFrom:
-                configMapKeyRef:
-                  name: "{{ .Values.serviceInstance.nameOverride }}-config"
-                  key: KAFKA_BROKER
-            - name: KAFKA_PORT
-              valueFrom:
-                configMapKeyRef:
-                  name: "{{ .Values.serviceInstance.nameOverride }}-config"
-                  key: KAFKA_PORT
             - name: NODE_ENV
               valueFrom:
                 configMapKeyRef:

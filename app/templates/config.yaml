@@ -11,8 +11,6 @@ data:
   DB_NAME: {{ .Values.postgresql.postgresqlDatabase | quote }}
   DB_PORT: {{ .Values.postgresql.service.port | quote }}
   DB_HOST: {{ include "postgresql.fullname" . }}
-  KAFKA_BROKER: {{ .Values.kafka.broker | quote }}
-  KAFKA_PORT: {{ .Values.kafka.port | quote }}
 ---
 apiVersion: v1
 kind: Secret

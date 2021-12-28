@@ -1,7 +1,7 @@
 serviceInstance:
   nameOverride: order-service
   image:
-    repository: tyku/hw_stream_processing
+    repository: tyku/hw_7
     imagePullPolicy: Always
     tag: latest
   containerPort: 8000

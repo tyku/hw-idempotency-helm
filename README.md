@@ -1,47 +1,13 @@
-# Homework stream-processing (Event-collaboration)
-
-## Install user service
-
-namespace default
-```bash
-helm install user ./app -f ./user-service/values.yaml
-```
+# Homework idempotency
 
 ## Install order service
 
 namespace default
 ```bash
-helm install user ./app -f ./order-service/values.yaml
-```
-
-## Install billing service
-
-namespace default
-```bash
-helm install user ./app -f ./billing-service/values.yaml
-```
-
-## Install notification service
-
-namespace default
-```bash
-helm install user ./app -f ./notification-service/values.yaml
-```
-
-## Install Kafka
-Add repo
-```bash
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo update
-helm install kafka bitnami/kafka
+helm install order ./app -f ./order-service/values.yaml
 ```
 
 ## Installation nginx ingress
-
-If you are using minikube, turn on ingress addon with command
-```bash
-minikube addons  enable ingress
-```
 
 Add repo
 ```bash
@@ -61,13 +27,16 @@ kubectl apply -f ./nginx-ingress/routes.yaml
 minikube service -n nginx-ingress ingress-nginx-controller
 ```
 
+If you are using minikube, turn on ingress addon with command
+```bash
+minikube addons  enable ingress
+```
+
+
 ## Uninstall
 
 ```bash
-helm un user
 helm un order
-helm un billing
-helm un notification
 ```
 
 
